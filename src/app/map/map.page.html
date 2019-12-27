@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>New destination</ion-title>
+    <ion-buttons slot="primary">
+        <ion-button>
+          <ion-icon style="opacity:0" slot="icon-only" name="settings"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="page-wrapper" *ngIf="gpsIsOn">
+    <div class="canvas-wrapper">
+      <div id="map_canvas" class="map-canvas">
+        <div class="address-search">
+          <input id="input" [(ngModel)]="inputLocation" type="text" (keyup.enter)="updateDestination()">
+          <div id="search-wrapper" (click)="updateDestination()">
+            <ion-button fill="clear" size="small">
+                <ion-icon id="icon" slot="icon-only" name="search"></ion-icon>  
+            </ion-button>              
+          </div>                
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="no-permission-wrapper" *ngIf="!gpsIsOn">
+    <ion-icon class="sad-icon" name="sad" ></ion-icon>
+    <p>GPS is not enabled</p>
+    <ion-button (click)="reloadMap()" color="secondary">
+      <ion-icon  slot="icon-only" name="refresh"></ion-icon>
+    </ion-button>
+  </div>
+</ion-content>

@@ -1,0 +1,101 @@
+<ion-header *ngIf="!tutorial">
+	<ion-toolbar >
+		<ion-buttons slot="start">
+			<ion-button [routerLink]="['/info']">
+				<ion-icon slot="icon-only" name="information-circle-outline"></ion-icon>
+			</ion-button>
+		</ion-buttons>
+		<ion-title>
+			<h1 class="logo-wrapper">
+				<img class="logo" src="/assets/logo.png">	
+			</h1>					
+		</ion-title>
+		<ion-buttons slot="primary">
+			<ion-button [routerLink]="['/settings']">
+				<ion-icon slot="icon-only" name="settings"></ion-icon>
+			</ion-button>
+		</ion-buttons>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<div class="slides-wrapper" *ngIf="tutorial">
+		<ion-slides class="slides-wrapper" pager="true" [options]="slideOpts">
+			<ion-slide class="tutorial-slide">
+				<img class="tutorial-logo" src="/assets/logo.png">
+				<h5>Welcome to</h5>
+				<h1 class="app-name"><strong>Moving Alarm</strong></h1>
+				<h5>Never miss your stop again</h5>
+			</ion-slide>
+			<ion-slide class="tutorial-slide">
+				<img class="tutorial-logo" src="/assets/logo.png">
+				<h1>To set up a new alarm press on the <ion-icon name="notifications" color="secondary"></ion-icon> icon
+					in the home page.</h1>
+					<img class="img-slide" src="/assets/images/slide1.png">
+				</ion-slide>
+				<ion-slide class="tutorial-slide">
+					<img class="tutorial-logo" src="/assets/logo.png">
+					<h1>Either use one of your recent destinations or press the 
+						<ion-icon color="secondary" name="add">
+						</ion-icon>
+						icon and use the map to look for your destination.
+					</h1>
+					<img class="img-slide" src="/assets/images/slide2.png">
+				</ion-slide>
+				<ion-slide class="tutorial-slide">
+					<img class="tutorial-logo" src="/assets/logo.png">
+					<h1>Relax and wait for the alarm to ring when you get close to your destination.</h1>
+					<img class="img-slide" src="/assets/images/slide3.png">
+					<ion-button size="small" (click)="endTutorial()" color="secondary">Start</ion-button>
+				</ion-slide>
+			</ion-slides>
+		</div>
+		<div class="page-wrapper" *ngIf="!tutorial">
+			<div class="alarm-disabled" *ngIf="!alarm.isActive()">
+				<p style="text-align: center;">
+					Alarm Status:
+					<ion-chip color="danger">
+						<ion-label>Disabled</ion-label>
+					</ion-chip>
+				</p>
+				<p>Set an alarm using the button below</p>
+			</div>
+			
+			<div class="alarm-enabled" *ngIf="alarm.isActive()">				
+				<div class="informations-wrapper">
+					<p style="text-align: center;">
+						Alarm Status:
+						<ion-chip color="secondary">
+							<ion-label>Enabled</ion-label>
+						</ion-chip>
+					</p>
+					<ion-spinner *ngIf="position.distance == -1" color="secondary" name="crescent"></ion-spinner>
+					<span *ngIf="position.distance >= 0" class="information-title">Distance: <strong
+						class="information-value">{{position.distance | number:'1.1-1'}}</strong> Km</span>
+						<span *ngIf="position.distance >= 0" class="information-title">Speed: <strong
+							class="information-value">{{position.speed | number:'1.1-1' }}</strong> Km/h</span>
+							<!-- <span *ngIf="position.distance >= 0" class="information-title">Time of Arrival: <strong class="information-value">13:45</strong></span> -->
+							<span *ngIf="position.distance >= 0" class="information-title">Ringtone: <strong
+								class="information-value">{{settings.alarmRingtone.Name}}</strong></span>
+								
+							</div>
+							
+						</div>
+					</div>
+					
+					<ion-fab *ngIf="!alarm.isActive() && !tutorial" vertical="bottom" horizontal="center" slot="fixed"
+					[routerLink]="['/destination-selector']" class="fab">
+					<ion-fab-button>
+						<ion-icon color="secondary" style="font-size:100px;" name="notifications"></ion-icon>
+					</ion-fab-button>
+				</ion-fab>
+				<ion-fab *ngIf="alarm.isActive() && !tutorial" vertical="bottom" horizontal="center" class="fab" slot="fixed">
+					<ion-fab-button (click)="disableAlarm()" type="button">
+						<ion-icon *ngIf="!alarm.isRinging()" color="warning" style="font-size:100px;" name="notifications-off">
+						</ion-icon>
+						<ion-icon *ngIf="alarm.isRinging()" color="secondary" style="font-size:100px;" name="notifications-off">
+						</ion-icon>
+					</ion-fab-button>
+				</ion-fab>
+				
+			</ion-content>

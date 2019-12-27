@@ -1,0 +1,39 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>tutorial</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+  <div class="slides-wrapper" >
+		<ion-slides class="slides-wrapper" pager="true" [options]="slideOpts">
+			<ion-slide class="tutorial-slide">
+				<img class="tutorial-logo" src="/assets/logo.png">
+				<h5>Welcome to</h5>
+				<h1 class="app-name"><strong>Moving Alarm</strong></h1>
+				<h5>Never miss your stop again</h5>
+			</ion-slide>
+			<ion-slide class="tutorial-slide">
+				<img class="tutorial-logo" src="/assets/logo.png">
+				<h1>To set up a new alarm press on the <ion-icon name="notifications" color="secondary"></ion-icon> icon
+					in the home page.</h1>
+				<img class="img-slide" src="/assets/images/slide1.png">
+				</ion-slide>
+				<ion-slide class="tutorial-slide">
+					<img class="tutorial-logo" src="/assets/logo.png">
+					<h1>Either use one of your recent destinations or press the 
+						<ion-icon color="secondary" name="add">
+						</ion-icon>
+						icon and use the map to look for your destination.
+					</h1>
+					<img class="img-slide" src="/assets/images/slide2.png">
+				</ion-slide>
+				<ion-slide class="tutorial-slide">
+					<img class="tutorial-logo" src="/assets/logo.png">
+					<h1>Relax and wait for the alarm to ring when you get close to your destination.</h1>
+					<img class="img-slide" src="/assets/images/slide3.png">
+					<ion-button size="small" (click)="endTutorial()" color="secondary">Start</ion-button>
+				</ion-slide>
+			</ion-slides>
+		</div>
+</ion-content>

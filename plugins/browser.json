@@ -1,0 +1,70 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-plugin-ionic-webview": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-plugin-ionic-keyboard": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-plugin-nativestorage": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-plugin-googlemaps": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-plugin-geolocation": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-plugin-native-ringtones": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-plugin-background-geolocation": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-plugin-nativeaudio": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "clovelced-plugin-audiomanagement": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-plugin-android-permissions": {
+      "PACKAGE_NAME": "it.paoloinnocenti.movingalarm"
+    },
+    "cordova-plugin-request-location-accuracy": {
+      "PACKAGE_NAME": "it.paoloinnocenti.movingalarm"
+    },
+    "cordova-plugin-advanced-http": {
+      "PACKAGE_NAME": "it.paoloinnocenti.movingalarm"
+    },
+    "cordova-plugin-screen-orientation": {
+      "PACKAGE_NAME": "it.paoloinnocenti.movingalarm"
+    }
+  },
+  "dependent_plugins": {
+    "cordova-plugin-media": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    }
+  }
+}

@@ -1,0 +1,105 @@
+
+.alarm-disabled{
+    height: 100%;
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+
+.add-button{
+    font-size:70px;
+    height: 110px;
+}
+
+.informations-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height:90%;
+}
+
+*{
+    font-size:20px;
+}
+
+.information-title{
+    color:#ebebeb;
+    strong{
+        color:white;
+    }
+}
+
+.alarm-enabled{
+    height:85%;
+}
+
+.alarm-disabled{
+    height: 85%;
+}
+
+.page-wrapper{
+    height:100%;
+}
+
+.fab{
+    margin-bottom:35px;
+}
+
+.slides-wrapper{
+    height:100%;
+}
+
+.tutorial-slide{
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    ion-button{
+        margin-top:30px;
+        position:absolute;
+        bottom:0px;
+        margin-bottom:50px;
+    }
+    
+    h1{
+        margin-left:20px;
+        margin-right:20px;
+    }
+}
+
+.img-slide{
+    width:50%;
+    border:1px solid white;
+}
+
+.app-name{
+    
+    margin:30px 0;
+    
+    strong{
+        font-size:28px;
+        margin:30px 0;
+    }    
+}
+
+.logo-wrapper{
+    
+    display: flex;
+    justify-content:center;
+    margin: 0px !important;
+    
+    img{
+        height:27px;
+    }
+}
+
+.tutorial-logo{
+    position: absolute;
+    margin:0 auto;
+    top:15px;
+    width:60px;
+}

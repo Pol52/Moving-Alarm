@@ -1,0 +1,63 @@
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.address-search {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 20px auto;
+    width: 90%;
+    font-size: 20px;
+    
+    input {
+        border: 1px solid black;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        color: black;
+    }
+    
+    #search-wrapper {
+        background-color: white;
+        border: 1px solid black;
+        border-left: 0px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+    
+    #icon {
+        color: black;
+    }
+
+    .padding-native{
+        padding-left:1px !important;
+        padding-right:1px !important;
+    }
+}
+
+.canvas-wrapper {
+    flex-basis: 200px;
+    height: 100%;
+    width: 100%;
+    flex-grow: 2;
+}
+
+.map-canvas {
+    height: 100%;
+    width: 100%;
+}
+
+.no-permission-wrapper{
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+
+    .sad-icon{
+        font-size:80px;
+    }
+}

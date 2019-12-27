@@ -1,0 +1,13 @@
+{
+  "name": "MovingAlarm",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular",
+  "proxies": [
+    {
+      "path":"/google",
+      "proxyUrl": "https://www.google.com"
+    }
+  ]
+}
