@@ -83,10 +83,12 @@ export class PositionService {
     }
 
     private startPositionUpdate(){
-      this.checkUpdatedDistance();
-      let source = interval(this.positionUpdateRate);
-      this.updateSubscription = source.subscribe(() => {
-        this.checkUpdatedDistance();
+      this.backgroundGeolocation.getCurrentLocation().then((location: BackgroundGeolocationResponse) =>{
+        this.position = location;
+        let source = interval(this.positionUpdateRate);
+        this.updateSubscription = source.subscribe(() => {
+          this.checkUpdatedDistance();
+        })
       })
     }
 
