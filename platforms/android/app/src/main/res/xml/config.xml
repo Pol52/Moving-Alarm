@@ -144,8 +144,8 @@
     <preference name="xwalkZOrderOnTop" value="true" />
     <preference name="BackgroundColor" value="0" />
     <preference name="webView" value="com.ionicframework.cordova.webview.IonicWebViewEngine" />
-    <preference name="GOOGLE_MAPS_ANDROID_API_KEY" value="AIzaSyBrTou-PJZBSDHJ65Pdn1BR08NPvnWfU6A" />
-    <preference name="GOOGLE_MAPS_IOS_API_KEY" value="AIzaSyBrTou-PJZBSDHJ65Pdn1BR08NPvnWfU6A" />
+    <preference name="GOOGLE_MAPS_ANDROID_API_KEY" value="AIzaSyAevJutz5slzCjhxM24lzgpT1gbbCO99C8" />
+    <preference name="GOOGLE_MAPS_IOS_API_KEY" value="AIzaSyAevJutz5slzCjhxM24lzgpT1gbbCO99C8" />
     <preference name="ScrollEnabled" value="false" />
     <preference name="android-minSdkVersion" value="19" />
     <preference name="BackupWebStorage" value="none" />
